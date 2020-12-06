@@ -1,0 +1,18 @@
+* {
+  display: inline-flex;
+}
+
+.random-image-div {
+  font-size: 29px;
+  text-align: center;
+  background: lightgreen;
+  border: 1px solid #000;
+  height: 100px;
+  width: 100px;
+  cursor: pointer;
+}
+
+img {
+  height: 102px;
+  width: 102px;
+}
