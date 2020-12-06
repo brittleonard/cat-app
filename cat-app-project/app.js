@@ -1,16 +1,20 @@
 $(() => {
 
    $.ajax({
-         url:'https://www.omdbapi.com/?apikey=53aa2cd6&t=' + userInput
-         // url: `https://www.omdbapi.com/?apikey=53aa2cd6&t=${userInput}`,
+         url:'https://cat-fact.herokuapp.com/facts'
       }).then(
          (data) => {
            //handler for success
            console.log(data);
-           $("#title").html(data.Title);
-           $("#year").html(data.Year);
-           $("#rated").html(data.Rated);
-           // $("#runtime").html(data.Runtime);
+           $("#facts").html(data.all);
+        })
+   $.ajax({
+      url:'https://api.thecatapi.com/v1/images/search'
+   }).then(
+      (image) => {
+         $('#images').html(image.all);
+      })
+
   // array of random images
   const images = [
     "https://source.unsplash.com/random/200x200?sig=1",
@@ -39,4 +43,5 @@ $(() => {
   // create an event handler, on click execute the addImage function
   $randomImgDiv.on("click", addImage);
   //jQuery onReady ends
+
 });
