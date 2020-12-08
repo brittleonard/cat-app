@@ -8,7 +8,7 @@ $(() => {
            console.log(data);
            $("#facts").html(data.all);
         })
-   $.ajax({
+   $.ajax({ //want to make a random cat image but might just need to have the images individually 
       url:'https://api.thecatapi.com/v1/images/search'
    }).then(
       (image) => {
