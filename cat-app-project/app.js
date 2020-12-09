@@ -1,47 +1,63 @@
 $(() => {
-   
+
+   arrayIndex = $(event.target).attr('text')
+
+
+
    $.ajax({
-         url:'https://cat-fact.herokuapp.com/facts'
+         url:'https://cat-fact.herokuapp.com/facts' + arrayIndex,
       }).then(
          (data) => {
            //handler for success
            console.log(data);
-           $("#facts").html(data.all);
+           $("#fact").html(data.text);
         })
-   $.ajax({ //want to make a random cat image but might just need to have the images individually
-      url:'https://api.thecatapi.com/v1/images/search'
-   }).then(
-      (image) => {
-         $('#images').html(image.all);
-      })
 
   // array of random images
-  const images = [
-    "https://source.unsplash.com/random/200x200?sig=1",
-    "https://source.unsplash.com/random/200x200?sig=2",
-    "https://source.unsplash.com/random/200x200?sig=3",
-    "https://source.unsplash.com/random/200x200?sig=4",
-    "https://source.unsplash.com/random/200x200?sig=5",
-    "https://source.unsplash.com/random/200x200?sig=6",
-  ];
+  let imgIndex = 0;
+  let numOfImages = $('.carousel-image').children().length -1;
+  console.log(numOfImages);
 
-  // create our 'random image titled div' and append it to the body
-  const $randomImgDiv = $("<div class='random-image-div'>")
-    .text("Add Random Image")
-    .appendTo("body");
+  $('.next').on('click', () => {
 
-  //create our 'add image' function
-  const addImage = () => {
-    let i = 0;
-    let $img = $(`<img src="${images[i]}" alt="someImage">`);
-    //If there are items in the images array, add an element to the DOM & remove position 0
-    if (images.length !== 0) {
-      $img.appendTo("body");
-      images.shift();
+    $('.carousel-image').children().eq(imgIndex).css('display', 'none');
+    if(imgIndex < numOfImages) {
+      imgIndex++;
+    } else {
+      imgIndex = 0;
     }
-  };
-  // create an event handler, on click execute the addImage function
-  $randomImgDiv.on("click", addImage);
-  //jQuery onReady ends
+    $('.carousel-image').children().eq(imgIndex).css('display', 'block');
+  });
+
+$('.previous').on('click', () => {
+  $('.carousel-image').children().eq(imgIndex).css('display', 'none');
+  if(imgIndex > 0) {
+    imgIndex--;
+  } else {
+    imgIndex = numOfImages;
+  }
+  $('.carousel-image').children().eq(imgIndex).css('display', 'block');
+});
+
 
 });
+
+
+
+//
+// const settings = {
+//     "async": true,
+//     "crossDomain": true,
+//     "url": "https://api.thecatapi.com/v1/images/search",
+//     "method": "GET",
+//     "headers": {
+//       "x-api-key": "abd3fb7e-101b-470d-b095-d8b0c8939b9d",
+//     }
+// //   }
+//
+// "",
+// "https://cdn2.thecatapi.com/images/b6r.jpg",
+// "https://cdn2.thecatapi.com/images/dtp.jpg",
+// "https://cdn2.thecatapi.com/images/a4c.jpg",
+// "https://cdn2.thecatapi.com/images/b6c.jpg",
+// "https://cdn2.thecatapi.com/images/d3t.jpg",
