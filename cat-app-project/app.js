@@ -48,15 +48,15 @@ $(() => {
     $('.carousel-image').children().eq(imgIndex).css('display', 'block');
   });
 
-$('.previous').on('click', () => {
-  $('.carousel-image').children().eq(imgIndex).css('display', 'none');
-  if(imgIndex > 0) {
-    imgIndex--;
-  } else {
-    imgIndex = numOfImages;
-  }
-  $('.carousel-image').children().eq(imgIndex).css('display', 'block');
-});
+   $('.previous').on('click', () => {
+     $('.carousel-image').children().eq(imgIndex).css('display', 'none');
+     if(imgIndex > 0) {
+       imgIndex--;
+     } else {
+       imgIndex = numOfImages;
+     }
+     $('.carousel-image').children().eq(imgIndex).css('display', 'block');
+   });
 
 
 });
