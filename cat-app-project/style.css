@@ -19,6 +19,15 @@ h1 {
   text-shadow: 1px 1px #f2cd99;
   letter-spacing: 2px;
 }
+#fact {
+   font-family: 'Montserrat', impact;
+   font-weight: 600;
+   font-size: 1em;
+   color: #255453;
+   text-align-last: center;
+   margin-bottom: 15px;
+}
+
 /* ======= CAROUSEL SECTION ======== */
 .carousel-container {
   width: 70%;

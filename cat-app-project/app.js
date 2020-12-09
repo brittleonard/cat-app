@@ -1,11 +1,11 @@
 $(() => {
 
-   arrayIndex = $(event.target).attr('text')
+   let arrayIndex = $('#fact').children().attr('text')
 
 
 
    $.ajax({
-         url:'https://cat-fact.herokuapp.com/facts' + arrayIndex,
+         url:'https://cat-fact.herokuapp.com/facts/random',
       }).then(
          (data) => {
            //handler for success
@@ -41,23 +41,3 @@ $('.previous').on('click', () => {
 
 
 });
-
-
-
-//
-// const settings = {
-//     "async": true,
-//     "crossDomain": true,
-//     "url": "https://api.thecatapi.com/v1/images/search",
-//     "method": "GET",
-//     "headers": {
-//       "x-api-key": "abd3fb7e-101b-470d-b095-d8b0c8939b9d",
-//     }
-// //   }
-//
-// "",
-// "https://cdn2.thecatapi.com/images/b6r.jpg",
-// "https://cdn2.thecatapi.com/images/dtp.jpg",
-// "https://cdn2.thecatapi.com/images/a4c.jpg",
-// "https://cdn2.thecatapi.com/images/b6c.jpg",
-// "https://cdn2.thecatapi.com/images/d3t.jpg",
