@@ -1,6 +1,6 @@
-/* ======= GENERAL ======== */
+
 body {
-  background: #f9f9f9;
+  background: lavender;
 }
 .container {
   display: flex;
@@ -8,15 +8,15 @@ body {
   align-items: center;
 }
 .container > img {
-  width: 50%;
+  width: 60%;
 }
 h1 {
   font-family: 'Montserrat', impact;
   font-weight: 800;
   font-size: 2.5em;
-  margin-top: -1%;
+  margin-top: 1%;
   color: #4caaa8;
-  text-shadow: 1px 1px #f2cd99;
+  text-align: center;
   letter-spacing: 2px;
 }
 #fact {
@@ -24,23 +24,23 @@ h1 {
    font-weight: 600;
    font-size: 1em;
    color: #255453;
-   text-align-last: center;
+   text-align: center;
    margin-bottom: 15px;
 }
 
-/* ======= CAROUSEL SECTION ======== */
+/* ======= CAT CAROUSEL ======== */
 .carousel-container {
   width: 70%;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 .carousel-image {
   width: 80%;
-  background: #fa8d8e;
-  padding: 10px;
-  border-radius: 10px;
+  background: #90b3b2;
+  padding: 20px;
+  border-radius: 20px;
   box-sizing: border-box;
-  box-shadow: 2px 2px #f2cd99;
+
 }
 .carousel-image img {
   width: 100%;
@@ -49,42 +49,19 @@ h1 {
 }
 .carousel-button {
   align-self: center;
-  background: #f2cd99;
-  color: #888;
-  padding: 10px;
-  border-radius: 50%;
+  background: #f9f9f9;
+  color: #999;
+  padding: 20px;
+  border-radius: 20%;
   text-align: center;
-  box-shadow: 1px 1px #fa8d8e;
 }
 .carousel-button:hover {
   cursor: pointer;
-  background: #fa8d8e;
-  box-shadow: 1px 1px #f2cd99;
+  background: #a1a1a1;
+  box-shadow: 1px 1px #999;
   color: white;
 }
 
 .carousel-image img:first-of-type {
   display: block;
 }
-
-
-
-
-/* * {
-  display: inline-flex;
-}
-
-.random-image-div {
-  font-size: 29px;
-  text-align: center;
-  background: lightgreen;
-  border: 1px solid #000;
-  height: 100px;
-  width: 100px;
-  cursor: pointer;
-}
-
-img {
-  height: 102px;
-  width: 102px;
-} */
