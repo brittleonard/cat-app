@@ -9,7 +9,7 @@ $(() => {
            // console.log(data);
            $("#fact").html(data.text);
         })
-
+        
    $('.next').on('click', ()=>{
 
    $.ajax({
