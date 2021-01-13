@@ -9,8 +9,8 @@ $(() => {
            // console.log(data);
            $("#fact").html(data.text);
         })
-        
-   $('.next').on('click', ()=>{
+
+   $('#next').on('click', ()=>{
 
    $.ajax({
          url:'https://cat-fact.herokuapp.com/facts/random',
@@ -21,7 +21,7 @@ $(() => {
         })
    });
 
-   $('.previous').on('click', ()=>{
+   $('#previous').on('click', ()=>{
 
    $.ajax({
          url:'https://cat-fact.herokuapp.com/facts/random',
@@ -38,7 +38,7 @@ $(() => {
   let numOfImages = $('.carousel-image').children().length -1;
   // console.log(numOfImages);
 
-  $('.next').on('click', () => {
+  $('#next').on('click', () => {
     $('.carousel-image').children().eq(imgIndex).css('display', 'none');
     if(imgIndex < numOfImages) {
       imgIndex++;
@@ -48,7 +48,7 @@ $(() => {
     $('.carousel-image').children().eq(imgIndex).css('display', 'block');
   });
 
-   $('.previous').on('click', () => {
+   $('#previous').on('click', () => {
      $('.carousel-image').children().eq(imgIndex).css('display', 'none');
      if(imgIndex > 0) {
        imgIndex--;
