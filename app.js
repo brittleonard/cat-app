@@ -20,6 +20,7 @@ $(() => {
            $("#fact").html(data.text);
         })
    });
+   
 
    $('#previous').on('click', ()=>{
 
